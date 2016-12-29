@@ -182,10 +182,12 @@ equal_length(List1,List2) :-
  * Example: [a,b,[c,d],[[[e]]]] -> [a,b,c,d,e]
  *
  */
-flatten([],[]).
-flatten([Head|Tail],FlatList) :-
-	is_list(Head),
-	append([Head],FlatList,List).
+flatten([],[]) :- !.
+flatten(Element, [Element]) :- atom(Element); number(Element).
+flatten([Head|Tail], L) :-
+	flatten(Head, NewHead),
+	flatten(Tail, NewTail), !,
+	append(NewHead, NewTail, L).
 
 
 
