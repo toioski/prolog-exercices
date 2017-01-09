@@ -1,0 +1,6 @@
+ memo(rossi,7).
+ memo(bianchi,9).
+ memo(blu,7).
+ memo(neri,11).
+ memo(carli,11).
+ memo(rapini,8).
