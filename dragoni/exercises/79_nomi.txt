@@ -1,0 +1,4 @@
+n(8,bianchi).
+n(9,bruni).
+n(3,caio).
+n(7,sempronio).
